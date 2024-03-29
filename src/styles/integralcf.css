@@ -1,0 +1,77 @@
+/**
+
+ * Font Styles:
+
+ * Integral CF Regular
+ * Integral CF Regular Italic
+ * Integral CF Medium
+ * Integral CF Medium Italic
+ * Integral CF Bold
+ * Integral CF Bold Italic
+ * Integral CF DemiBold
+ * Integral CF DemiBold Italic
+ * Integral CF ExtraBold
+ * Integral CF ExtraBold Italic
+ * Integral CF HeavyBold
+ * Integral CF HeavyBold Italic
+*/
+
+@font-face {
+    font-family: 'Integralcf-Bold';
+    src: url('../assets/fonts/Demo_Fonts/Fontspring-DEMO-integralcf-bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Integralcf-Bold-Italic';
+    src: url('../assets/fonts/Demo_Fonts/Fontspring-DEMO-integralcf-boldoblique.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Integralcf-Demi-Bold';
+    src: url('../assets/fonts/Demo_Fonts/Fontspring-DEMO-integralcf-demibold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Integralcf-Demi-Italic';
+    src: url('../assets/fonts/Demo_Fonts/Fontspring-DEMO-integralcf-demiboldoblique.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Integralcf-Extra-Bold';
+    src: url('../assets/fonts/Demo_Fonts/Fontspring-DEMO-integralcf-extrabold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Integralcf-Extra-Italic';
+    src: url('../assets/fonts/Demo_Fonts/Fontspring-DEMO-integralcf-extraboldoblique.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Integralcf-Heavy-Bold';
+    src: url('../assets/fonts/Demo_Fonts/Fontspring-DEMO-integralcf-heavy.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Integralcf-Heavy-Italic';
+    src: url('../assets/fonts/Demo_Fonts/Fontspring-DEMO-integralcf-heavyoblique.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Integralcf-Medium-Bold';
+    src: url('../assets/fonts/Demo_Fonts/Fontspring-DEMO-integralcf-medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Integralcf-Medium-Italic';
+    src: url('../assets/fonts/Demo_Fonts/Fontspring-DEMO-integralcf-mediumoblique.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Integralcf-Regular-Bold';
+    src: url('../assets/fonts/Demo_Fonts/Fontspring-DEMO-integralcf-regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Integralcf-Regular-Italic';
+    src: url('../assets/fonts/Demo_Fonts/Fontspring-DEMO-integralcf-regularoblique.otf') format('opentype');
+}
