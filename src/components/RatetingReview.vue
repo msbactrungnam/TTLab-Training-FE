@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container class="container-main" fluid>
     <v-card flat class="tabs-item">
       <v-tabs v-model="tab" align-tabs="center" grow>
         <v-tab style="width: 33%" :value="1">Product Details</v-tab>
@@ -361,7 +361,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.v-container {
+.container-main {
   padding: 0 100px;
 }
 .tabs-item {
@@ -465,7 +465,7 @@ export default {
   line-height: 21.6px;
 }
 @media only screen and (max-width: 600px) {
-  .v-container {
+  .container-main {
     padding: 0 16px;
   }
   .tabs-item {
