@@ -21,10 +21,6 @@
   }
 }
 
-.new-arrivals {
-  padding-bottom: 64px;
-  border-bottom: 1px solid #0000001a;
-}
 @media screen and (max-width: 600px) {
   .headbar {
     position: fixed !important;

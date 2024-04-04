@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid style="padding: 0 100px">
-    <v-card flat class="tabs-item mt-12">
+  <v-container fluid>
+    <v-card flat class="tabs-item">
       <v-tabs v-model="tab" align-tabs="center" grow>
         <v-tab style="width: 33%" :value="1">Product Details</v-tab>
         <v-tab style="width: 34%" :value="2">Rating & Reviews</v-tab>
@@ -8,15 +8,21 @@
       </v-tabs>
       <v-window v-model="tab">
         <v-window-item :value="2">
-          <div class="d-flex align-center justify-space-between mt-6">
+          <div
+            class="d-flex align-center justify-space-between mt-6 flex-no-wrap"
+          >
             <div class="tab-title">All Reviews <span>(451)</span></div>
             <div class="tab-btn">
-              <v-btn icon="mdi:mdi-tune-vertical" variant="tonal"></v-btn>
-              <v-menu :location="bottom">
+              <v-btn
+                class="tune-vertical-btn"
+                icon="mdi:mdi-tune-vertical"
+                variant="tonal"
+              ></v-btn>
+              <v-menu class="hidden-xs" :location="bottom">
                 <template v-slot:activator="{ props }">
                   <v-btn
                     v-bind="props"
-                    class="mx-3 rounded-xl"
+                    class="mx-3 rounded-xl hidden-xs"
                     style="width: 120px"
                     variant="tonal"
                     height="48"
@@ -32,16 +38,14 @@
               <v-btn
                 class="write-review-btn rounded-xl"
                 :elevation="0"
-                style="width: 166px"
                 theme="dark"
-                height="48"
                 >Write a Review</v-btn
               >
             </div>
           </div>
           <v-container fluid class="mt-2 px-0">
             <v-row>
-              <v-col cols="6" class="d-flex flex-column align-start">
+              <v-col cols="12" lg="6" class="d-flex flex-column align-start">
                 <v-card
                   variant="outlined"
                   class="review-card rounded-xl"
@@ -64,9 +68,8 @@
                         <v-btn
                           variant="text"
                           icon="mdi:mdi-dots-horizontal"
-                          size="24"
                           color="#00000066"
-                          class="pa-0 mr-2"
+                          class="hidden-xs pa-0 mr-2"
                         >
                         </v-btn>
                       </div>
@@ -114,7 +117,7 @@
                           icon="mdi:mdi-dots-horizontal"
                           size="24"
                           color="#00000066"
-                          class="pa-0 mr-2"
+                          class="hidden-xs pa-0 mr-2"
                         >
                         </v-btn>
                       </div>
@@ -162,7 +165,7 @@
                           icon="mdi:mdi-dots-horizontal"
                           size="24"
                           color="#00000066"
-                          class="pa-0 mr-2"
+                          class="hidden-xs pa-0 mr-2"
                         >
                         </v-btn>
                       </div>
@@ -188,7 +191,7 @@
                   </v-container>
                 </v-card>
               </v-col>
-              <v-col cols="6" class="d-flex flex-column align-end">
+              <v-col cols="12" lg="6" class="d-flex flex-column align-end">
                 <v-card
                   variant="outlined"
                   class="review-card rounded-xl"
@@ -213,7 +216,7 @@
                           icon="mdi:mdi-dots-horizontal"
                           size="24"
                           color="#00000066"
-                          class="pa-0 mr-2"
+                          class="hidden-xs pa-0 mr-2"
                         >
                         </v-btn>
                       </div>
@@ -262,7 +265,7 @@
                           icon="mdi:mdi-dots-horizontal"
                           size="24"
                           color="#00000066"
-                          class="pa-0 mr-2"
+                          class="hidden-xs pa-0 mr-2"
                         >
                         </v-btn>
                       </div>
@@ -311,7 +314,7 @@
                           icon="mdi:mdi-dots-horizontal"
                           size="24"
                           color="#00000066"
-                          class="pa-0 mr-2"
+                          class="hidden-xs pa-0 mr-2"
                         >
                         </v-btn>
                       </div>
@@ -358,6 +361,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.v-container {
+  padding: 0 100px;
+}
 .tabs-item {
   margin-top: 80px;
   .v-tabs {
@@ -373,10 +379,7 @@ export default {
 
     .v-slide-group-item--active {
       font-family: "Satoshi-Bold";
-      font-size: 20px;
       font-weight: 500;
-      line-height: 22px;
-      text-align: center;
       color: #000000;
       border-bottom: 1px solid #000000;
     }
@@ -403,9 +406,21 @@ export default {
   line-height: 21.6px;
   text-align: left;
 }
+.tune-vertical-btn {
+  height: 48px;
+  width: 48px;
+  i {
+    height: 24px;
+    width: 24px;
+  }
+}
+.write-review-btn {
+  width: 166px;
+  height: 48px;
+}
 .review-card {
   height: 241.58px;
-  width: 610px;
+  width: 100%;
   border: 1px solid #0000001a;
   font-family: "Satoshi-Variable";
   font-size: 16px;
@@ -413,8 +428,16 @@ export default {
   line-height: 22px;
   text-align: left;
   .description {
-    width: 522px;
+    width: 92%;
     font-family: "Satoshi-Light";
+  }
+  .v-avatar {
+    height: 24px;
+    width: 24px;
+    i {
+      height: 16px;
+      width: 16px;
+    }
   }
   .customer-name {
     font-size: 20px;
@@ -440,5 +463,66 @@ export default {
   font-size: 16px;
   font-weight: 500;
   line-height: 21.6px;
+}
+@media only screen and (max-width: 600px) {
+  .v-container {
+    padding: 0 16px;
+  }
+  .tabs-item {
+    margin-top: 40px;
+    .v-tabs .v-tab {
+      font-size: 16px;
+    }
+  }
+
+  .tab-title {
+    font-size: 20px;
+    line-height: 27px;
+    span {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  .tab-btn {
+    font-size: 16px;
+    line-height: 21.6px;
+  }
+  .tune-vertical-btn {
+    height: 40px;
+    width: 40px;
+    margin-right: 8px;
+    i {
+      height: 20px;
+      width: 20px;
+    }
+  }
+  .write-review-btn {
+    width: 113px;
+    height: 40px;
+  }
+  .load-more-btn {
+    font-size: 14px;
+    line-height: 18.9px;
+    width: 195px;
+    height: 47px;
+    margin-top: 20px;
+  }
+  .review-card {
+    font-size: 14px;
+    line-height: 20px;
+    height: 244.19px;
+    .customer-name {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  .v-avatar {
+    height: 19px;
+    width: 19px;
+    i {
+      height: 13px;
+      width: 13px;
+    }
+  }
 }
 </style>

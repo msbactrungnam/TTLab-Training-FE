@@ -1,20 +1,7 @@
 <template>
   <div>
-    <v-card :loading="loading" class="my-12" max-width="295px" :elevation="0">
-      <template v-slot:loader="{ isActive }">
-        <v-progress-linear
-          :active="isActive"
-          height="4"
-          indeterminate
-        ></v-progress-linear>
-      </template>
-      <v-img
-        class="rounded-xl"
-        width="295px"
-        height="295px"
-        :src="image"
-        cover
-      ></v-img>
+    <v-card :elevation="0">
+      <v-img class="rounded-xl" :src="image" cover></v-img>
       <v-card-item class="pl-0">
         <v-card-title
           ><p class="title">{{ title }}</p></v-card-title
@@ -103,6 +90,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.v-card {
+  width: 295px;
+}
+.v-img {
+  background-color: #ff3333;
+  width: 295px;
+  height: 295px;
+}
 .title {
   font-family: "Satoshi-Bold";
   font-size: 20px;
@@ -138,9 +133,7 @@ export default {
   width: 58px;
   height: 28px;
   padding: 6px 14px 6px 14px;
-  gap: 12px;
   border-radius: 62px;
-  opacity: 0px;
   background-color: #ff33331a;
   color: #ff3333;
 
@@ -149,6 +142,45 @@ export default {
     font-size: 12px;
     font-weight: 500;
     line-height: 16.2px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  h1 {
+    margin: 32px 0;
+    font-size: 32px;
+    line-height: 38.4px;
+  }
+  .title {
+    font-size: 16px;
+    line-height: 21.6px;
+  }
+  .v-card {
+    width: 200px;
+  }
+  .v-img {
+    width: 200px;
+    height: 200px;
+  }
+  .rate {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.2px;
+  }
+  .price {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .original-price {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .sale-value {
+    width: 42px;
+    height: 20px;
+    span {
+      font-size: 10px;
+      line-height: 13.5px;
+    }
   }
 }
 </style>
