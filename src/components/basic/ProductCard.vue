@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-card :elevation="0">
-      <v-img class="rounded-xl" :src="image" cover></v-img>
+      <v-img class="rounded-xl" :src="getImgUrl()" cover></v-img>
       <v-card-item class="pl-0">
         <v-card-title
           ><p class="title">{{ title }}</p></v-card-title
@@ -73,6 +73,11 @@ export default {
       required: true,
     },
   },
+  methods: {
+    getImgUrl() {
+      return this.image;
+    },
+  },
   setup(props) {
     const computedRating = computed(() => {
       let rating = parseFloat(props.rating);
@@ -96,7 +101,7 @@ export default {
 .v-img {
   background-color: #ff3333;
   width: 295px;
-  height: 295px;
+  height: 298px;
 }
 .title {
   font-family: "Satoshi-Bold";
