@@ -734,7 +734,6 @@
                 </v-btn>
               </template>
               <template v-slot:item="{ isActive, page, props }">
-                {{ console.log(page) }}
                 <v-btn
                   class="pag-item pa-0"
                   v-if="!props.disabled"

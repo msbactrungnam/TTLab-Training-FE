@@ -1,6 +1,6 @@
 <template>
-  <v-footer class="footer-page d-flex justify-center pa-0">
-    <v-container fluid class="contact d-flex">
+  <v-footer class="footer-page d-flex justify-center pa-5">
+    <v-container elevation="0" fluid class="contact d-flex">
       <v-row class="d-flex rounded-xl align-center justify-space-between pa-0">
         <v-col class="contact-title ml-lg-12" cols="12" lg="6"
           >STAY UPTO DATE ABOUT OUR LATEST OFFERS</v-col
@@ -126,7 +126,6 @@
 </template>
 <style lang="scss" scoped>
 .footer-page {
-  height: 499px !important;
   background-color: #f0f0f0;
   margin-top: 170px;
 }
@@ -134,14 +133,13 @@
   padding: 0 100px;
   height: 180px;
   position: absolute;
-  bottom: 409px;
+  bottom: 466px;
   .v-row {
     background-color: black;
     height: 180px;
   }
   .contact-title {
     color: white;
-
     font-family: "Integralcf-Extra-Bold";
     font-size: 40px;
     font-weight: 700;
@@ -150,7 +148,6 @@
   }
   .email-submit {
     align-content: center;
-
     background: #ffffff;
     font-family: "Satoshi-Variable";
     font-size: 16px;
@@ -171,7 +168,7 @@
   }
 }
 .contact-link {
-  padding: 0 100px;
+  padding: 100px 100px;
   .link-page {
     a {
       text-decoration: none;
@@ -243,7 +240,6 @@
 }
 @media screen and (max-width: 600px) {
   .footer-page {
-    height: 1000px !important;
     background-color: #f0f0f0;
     margin-top: 220px;
   }
@@ -272,8 +268,7 @@
     }
   }
   .contact-link {
-    padding: 0 16px;
-
+    padding: 60px 16px 0 16px;
     .link-page {
       .link-page-main {
         margin-top: 80px;

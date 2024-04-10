@@ -92,6 +92,7 @@ h1 {
   .v-row {
     display: flex;
     flex-wrap: nowrap;
+    overflow: hidden;
   }
   .view-all {
     width: 100%;

@@ -25,6 +25,7 @@ declare module 'vue' {
     NewArrivals: typeof import('./components/NewArrivals.vue')['default']
     ProductCard: typeof import('./components/basic/ProductCard.vue')['default']
     ProductDetailPage: typeof import('./components/ProductDetailPage.vue')['default']
+    ProductTable: typeof import('./components/ProductTable.vue')['default']
     RatetingReview: typeof import('./components/RatetingReview.vue')['default']
     Recommend: typeof import('./components/Recommend.vue')['default']
     Recomment: typeof import('./components/Recomment.vue')['default']
@@ -32,5 +33,6 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     Topselling: typeof import('./components/Topselling.vue')['default']
     TopSelling: typeof import('./components/TopSelling.vue')['default']
+    UserTable: typeof import('./components/UserTable.vue')['default']
   }
 }
